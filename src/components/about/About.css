@@ -1,0 +1,272 @@
+/* =========================
+   ABOUT HERO
+========================= */
+
+.about-hero {
+  padding: 90px 20px;
+  text-align: center;
+  background: linear-gradient(180deg, #ffffff, #f0fdf4);
+}
+
+.about-hero h1 {
+  font-size: 48px;
+  font-weight: 700;
+}
+
+.about-hero span {
+  color: #16a34a;
+}
+
+.about-hero p {
+  margin-top: 16px;
+  font-size: 20px;
+  color: #6b7280;
+  max-width: 720px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+
+/* =========================
+   MISSION & VISION
+========================= */
+
+.about-cards {
+  padding: 80px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+}
+
+.info-card {
+  background: #ffffff;
+  padding: 36px;
+  border-radius: 18px;
+  border: 1px solid #e5e7eb;
+}
+
+.info-card h3 {
+  margin-bottom: 12px;
+  font-size: 30px;
+}
+
+.info-card p {
+  color: #4b5563;
+  line-height: 1.7;
+  font-size: 20px;
+}
+
+
+/* =========================
+   STORY SECTION
+========================= */
+
+.story {
+  padding: 90px;
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  gap: 60px;
+  align-items: center;
+}
+
+.story-text h2 {
+  font-size: 34px;
+  margin-bottom: 20px;
+}
+
+.story-text p {
+  margin-bottom: 16px;
+  font-size: 20px;
+  color: #4b5563;
+  line-height: 1.8;
+}
+
+.story-image img {
+  width: 650px;
+  border-radius: 24px;
+  box-shadow: 0 30px 60px rgba(0, 0, 0, 0.15);
+}
+
+
+/* =========================
+   CORE VALUES
+========================= */
+
+.values {
+  padding: 90px;
+  background: #F2F8F5;
+  text-align: center;
+}
+
+.values h2 {
+  font-size: 36px;
+}
+
+.subtitle {
+  margin-top: 10px;
+  color: #6b7280;
+  font-size: 18px;
+}
+
+.values-grid {
+  margin-top: 50px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 32px;
+}
+
+.value-card {
+  background: #ffffff;
+  padding: 36px;
+  border-radius: 18px;
+  border: 1px solid #e5e7eb;
+}
+
+.icon-green {
+  display: flex;
+  align-items: center;     /* vertical center */
+  justify-content: center;
+}
+
+.value-card h4 {
+  margin-top: 16px;
+  font-size: 22px;
+}
+
+.value-card p {
+  margin-top: 10px;
+  font-size: 18px;
+  color: #6b7280;
+  line-height: 1.6;
+}
+
+
+/* =========================
+   TEAM SECTION
+========================= */
+
+.team {
+  padding: 90px;
+  text-align: center;
+}
+
+.team h2 {
+  font-size: 36px;
+}
+
+.team-grid {
+  margin-top: 50px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 30px;
+}
+
+.team-card {
+  background: #ffffff;
+  padding: 36px;
+  border-radius: 18px;
+  border: 1px solid #e5e7eb;
+}
+
+.avatar {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #16a34a, #0ea5e9);
+  color: #ffffff;
+  font-size: 24px;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 18px;
+}
+
+.team-card h4 {
+  margin-bottom: 6px;
+}
+
+.role {
+  color: #16a34a;
+  font-weight: 500;
+}
+
+.prn {
+  display: block;
+  margin-top: 6px;
+  font-size: 13px;
+  color: #6b7280;
+}
+
+.guide-card {
+  margin: 70px auto 0;
+  padding: 36px;
+  max-width: 420px;
+  background: #ffffff;
+  border-radius: 18px;
+  border: 1px solid #e5e7eb;
+}
+
+
+/* =========================
+   ICON STYLES (SHARED)
+========================= */
+
+.icon {
+  width: 52px;
+  height: 52px;
+  border-radius: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 22px;
+  margin-bottom: 18px;
+}
+
+.green {
+  background: #ecfdf5;
+  color: #16a34a;
+}
+
+.blue {
+  background: #e0f2fe;
+  color: #0284c7;
+}
+
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 1100px) {
+  .story {
+    grid-template-columns: 1fr;
+  }
+
+  .team-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .about-cards {
+    grid-template-columns: 1fr;
+    padding: 60px 20px;
+  }
+
+  .story,
+  .values,
+  .team {
+    padding: 60px 20px;
+  }
+
+  .values-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 480px) {
+  .about-hero h1 {
+    font-size: 36px;
+  }
+}

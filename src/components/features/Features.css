@@ -1,0 +1,65 @@
+.features {
+  padding: 80px 80px;
+  background: #ffffff;
+  text-align: center;
+}
+
+.features h2 {
+  font-size: 36px;
+  font-weight: 700;
+}
+
+.features h2 span {
+  color: #16a34a;
+}
+
+.subtitle {
+  margin-top: 12px;
+  font-size: 18px;
+  color: #6b7280;
+}
+
+.features-grid {
+  margin-top: 50px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+}
+
+.feature-card {
+  background: #ffffff;
+  border-radius: 16px;
+  padding: 30px;
+  text-align: left;
+  border: 1px solid #e5e7eb;
+  transition: all 0.3s ease;
+}
+
+.feature-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.08);
+}
+
+.feature-card .icon {
+  width: 48px;
+  height: 48px;
+  background: #ecfdf5;
+  color: #16a34a;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 12px;
+  font-size: 22px;
+  margin-bottom: 16px;
+}
+
+.feature-card h3 {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+.feature-card p {
+  font-size: 15px;
+  color: #6b7280;
+  line-height: 1.6;
+}
