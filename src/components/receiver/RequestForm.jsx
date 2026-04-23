@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import axios from "axios";
+import API from "../../services/api";
 import { useNavigate } from "react-router-dom";
 
 import { useTranslation } from "react-i18next";
@@ -68,8 +68,8 @@ function RequestForm() {
     setLoading(true);
 
     try {
-      await axios.post(
-        "https://annapurna-backend-ei5e.onrender.com/donation/create",
+      await API.post(
+        "/donation/create",
         {
           foodType,
           quantity,

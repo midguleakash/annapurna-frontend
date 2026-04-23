@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import axios from "axios";
+import API from "../../services/api";
 import RequestCard from "../../components/receiver/RequestCard";
 import HistoryTabs from "../../components/receiver/HistoryTabs";
 import VolunteerBottomNav from "../../components/volunteer/VolunteerBottomNav";
@@ -28,8 +28,8 @@ function RequestHistory() {
         try {
             setLoading(true);
 
-            const res = await axios.get(
-                "https://annapurna-backend-ei5e.onrender.com/recevieRequests/all",
+            const res = await API.get(
+                "/recevieRequests/all",
                 {
                     headers: {
                         Authorization: "Bearer " + localStorage.getItem("token"),

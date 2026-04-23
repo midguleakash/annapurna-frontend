@@ -1,6 +1,9 @@
 import DonationForm from "../../components/donor/DonationForm";
 import DonorBottomNav from "../../components/donor/DonorBottomNav";
 
+import { useTranslation } from "react-i18next";
+import i18n from "i18next";
+
 function Donate() {
   return (
     <>

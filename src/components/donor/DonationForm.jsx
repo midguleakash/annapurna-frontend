@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import axios from "axios";
+import API from "../../services/api";
 import { useNavigate } from "react-router-dom";
 
 import { useTranslation } from "react-i18next";
@@ -7,14 +7,14 @@ import i18n from "i18next";
 
 
 function DonationForm() {
-  
+
   const { t } = useTranslation();
 
   const changeLanguage = (lng) => {
     i18n.changeLanguage(lng);
     localStorage.setItem("lang", lng);
   };
-  
+
   const [foodType, setFoodType] = useState("");
   const [quantity, setQuantity] = useState("");
   const [loading, setLoading] = useState(false);
@@ -69,8 +69,8 @@ function DonationForm() {
     setLoading(true);
 
     try {
-      await axios.post(
-        "https://annapurna-backend-ei5e.onrender.com/donation/create",
+      await API.post(
+        "/donation/create",
         {
           foodType,
           quantity,

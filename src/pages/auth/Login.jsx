@@ -1,6 +1,7 @@
 import "./Login.css";
 import { useState } from "react";
 import axios from "axios";
+import API from "../../services/api";
 import { Link, useNavigate } from "react-router-dom";
 import Navbar from "../../components/navbar/Navbar";
 import Footer from "../../components/footer/Footer";
@@ -10,14 +11,15 @@ import i18n from "i18next";
 
 
 function Login() {
-  
+
   const { t } = useTranslation();
 
   const changeLanguage = (lng) => {
     i18n.changeLanguage(lng);
     localStorage.setItem("lang", lng);
   };
-  
+
+  const [loading, setLoading] = useState(false);
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
 
@@ -26,9 +28,11 @@ function Login() {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+    setLoading(true);
+
 
     try {
-      const res = await axios.post("https://annapurna-backend-ei5e.onrender.com/user/login", {
+      const res = await API.post("/user/login", {
         email,
         password,
       });
@@ -58,6 +62,7 @@ function Login() {
     } catch (err) {
       console.error(err.response?.data || err.message);
       alert("Login failed");
+      setLoading(false);
     }
   };
 
@@ -89,7 +94,13 @@ function Login() {
               required
             />
 
-            <button type="submit">Login</button>
+            <button type="submit" disabled={loading}>
+              {loading ? (
+                <span className="loader"></span>
+              ) : (
+                "Login"
+              )}
+            </button>
           </form>
 
           <div className="login-footer">

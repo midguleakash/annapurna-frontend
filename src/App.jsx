@@ -34,15 +34,16 @@ function App() {
     <BrowserRouter>
       <Routes>
 
-        
-        <Route
+        <Route path="/" element={<Home />} />
+
+        {/* <Route
           path="/"
           element={
             <PublicRoute>
               <Home />
             </PublicRoute>
           }
-        />
+        /> */}
 
         <Route
           path="/about"

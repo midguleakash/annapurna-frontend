@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import axios from "axios";
+import API from "../../services/api";
 import DonationCard from "../../components/donor/DonationCard";
 import HistoryTabs from "../../components/donor/HistoryTabs";
 import VolunteerBottomNav from "../../components/volunteer/VolunteerBottomNav";
@@ -28,8 +28,8 @@ function DonationHistory() {
     try {
       setLoading(true);
 
-      const res = await axios.get(
-        "https://annapurna-backend-ei5e.onrender.com/volunteer/matches/all",
+      const res = await API.get(
+        "/volunteer/matches/all",
         {
           headers: {
             Authorization: "Bearer " + localStorage.getItem("token"),

@@ -14,12 +14,7 @@ function Navbar() {
   
   const navigate = useNavigate();
 
-  const { t } = useTranslation();
-
-  const changeLanguage = (lng) => {
-    i18n.changeLanguage(lng);
-    localStorage.setItem("lang", lng);
-  };
+  
 
   return (
     <nav className="navbar">

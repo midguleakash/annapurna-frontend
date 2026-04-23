@@ -1,5 +1,5 @@
 import "./Signup.css";
-import axios from "axios";
+import API from "../../services/api";
 import { useNavigate } from "react-router-dom";
 import { useState } from "react";
 import { Link } from "react-router-dom";
@@ -58,8 +58,8 @@ function Signup() {
         return alert("Please select a role");
       }
 
-      const res = await axios.post(
-        "https://annapurna-backend-ei5e.onrender.com/user/register",
+      const res = await API.post(
+        "/user/register",
         form
       );
 
