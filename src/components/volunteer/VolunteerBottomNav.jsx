@@ -47,13 +47,19 @@ function VolunteerBottomNav() {
         <NavItem
           icon="/icons/heart.png"
           label="Donate"
-          onClick={() => navigate("/donor/donate")}
+          onClick={() => navigate("/volunteer/donate")}
         />
 
         <NavItem
           icon="/icons/history.png"
-          label="History"
-          onClick={() => navigate("/donor/history")}
+          label="My History"
+          onClick={() => navigate("/volunteer/matches/my")}
+        />
+
+        <NavItem
+          icon="/icons/history.png"
+          label="All History"
+          onClick={() => navigate("/volunteer/matches/all")}
         />
 
         <NavItem
